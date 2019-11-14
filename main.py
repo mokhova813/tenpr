@@ -20,7 +20,7 @@ def my_form_post():
     data = json.load(json_obj)
     if request.form.get("alc"):
         return render_template('search.html', title='Home', data=data["drinks"])
-    return("error")
+    return("error!")
 
 if __name__ == "__main__":
     app.run(debug=True)
