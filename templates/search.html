@@ -7,12 +7,14 @@
         </style>
     </head>
     <body>
-<!--        {% for drink in data %}-->
-<!--             {{ drink['strDrink'] }}-->
-<!--        {% endfor %}-->
-        {% for drink in data %}
+    {% for drink in data_alc %}
+        <div><p><img  src="{{ drink.strDrinkThumb}}">  {{ drink.strDrink }}  </p></div>
+        {% endfor %}
+    {% for drink in data_nonalc %}
+        <div><p><img  src="{{ drink.strDrinkThumb}}">  {{ drink.strDrink }}  </p></div>
+        {% endfor %}
+    {% for drink in data_byName %}
         <div><p><img  src="{{ drink.strDrinkThumb}}">  {{ drink.strDrink }}  </p></div>
         {% endfor %}
     </body>
-
 </html>
