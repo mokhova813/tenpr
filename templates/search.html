@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Drinks</title>
+        <style>
+            img { width: 50px; vertical-align : middle; magrin-right : 30px }
+            p { font-size: 30px;}
+        </style>
+    </head>
+    <body>
+<!--        {% for drink in data %}-->
+<!--             {{ drink['strDrink'] }}-->
+<!--        {% endfor %}-->
+        {% for drink in data %}
+        <div><p><img  src="{{ drink.strDrinkThumb}}">  {{ drink.strDrink }}  </p></div>
+        {% endfor %}
+    </body>
+
+</html>
