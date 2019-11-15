@@ -16,22 +16,31 @@ def my_form_post():
     api_nonalc = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
     api_byName = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
 
-    json_obj_alc = urllib.request.urlopen(api_alc)
-    data_alc = json.load(json_obj_alc)
-
-    json_obj_nonalc = urllib.request.urlopen(api_nonalc)
-    data_nonalc = json.load(json_obj_nonalc)
-
-    json_obj_byName = urllib.request.urlopen(api_byName+(request.form.get("byName")).replace(' ', '%20'))
-    data_byName = json.load(json_obj_byName)
 
     if request.form.get("alc"):
+        json_obj_alc = urllib.request.urlopen(api_alc)
+        data_alc = json.load(json_obj_alc)
         return render_template('search.html', title='Home', data_alc=data_alc["drinks"])
+
     if request.form.get("nonalc"):
+        json_obj_nonalc = urllib.request.urlopen(api_nonalc)
+        data_nonalc = json.load(json_obj_nonalc)
         return render_template('search.html', title='Home', data_nonalc=data_nonalc["drinks"])
+
     if request.form.get("byName"):
+        json_obj_byName = urllib.request.urlopen(api_byName + (request.form.get("byName")).replace(' ', '%20'))
+        data_byName = json.load(json_obj_byName)
         return render_template('search.html', title='Home', data_byName=data_byName["drinks"])
     return ("error!")
+
+@app.route('/find', methods=['GET'])
+def show_recipe():
+    drink_id = request.args.get("id")
+    api_byId = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
+
+    json_obj_byId = urllib.request.urlopen(api_byId+drink_id)
+    api_byId = json.load(json_obj_byId)
+    return api_byId
 
 
 if __name__ == "__main__":
@@ -42,10 +51,3 @@ if __name__ == "__main__":
 # collection = db['test']
 #
 # collection.insert_one({'name' : "aa"})
-# api = '1'
-#
-# url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita&api_key=api'
-#
-# json_obj = urllib.request.urlopen(url)
-#
-# data = json.load(json_obj)
