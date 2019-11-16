@@ -1,3 +1,4 @@
+{% autoescape off %}
 <html>
     <head>
         <title>Drinks</title>
@@ -7,25 +8,15 @@
         </style>
     </head>
     <body>
+    {% if s1 != "" %}
+    <H2>Alcohol</H2>
+    {{s1}}
+    {% endif %}
+    {% if s2 != "" %}
+    <H2>Non-Alcohol</H2>
+    {{s2}}
+    {% endif %}
 
-    {% for drink in data_alc %}
-    <div>
-        <p>
-            <img  src="{{ drink.strDrinkThumb}}">
-            <a href="/find?id={{drink.idDrink}}">{{drink.strDrink}}</a>
-<!--            {{drink.strDrink}}-->
-        </p>
-    </div>
-    {% endfor %}
-
-
-    {% for drink in data_nonalc %}
-        <div><p><img  src="{{ drink.strDrinkThumb}}">  {{ drink.strDrink }}  </p></div>
-        {% endfor %}
-
-
-    {% for drink in data_byName %}
-        <div><p><img  src="{{ drink.strDrinkThumb}}">  {{ drink.strDrink }}  </p></div>
-        {% endfor %}
     </body>
 </html>
+{% endautoescape %}
