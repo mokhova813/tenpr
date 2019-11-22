@@ -1,0 +1,8 @@
+{% for drink in data %}
+        <div>
+            <p>
+                <img  src="{{ drink.strDrinkThumb}}">
+                <a href="/find?id={{drink.idDrink}}">{{drink.strDrink}}</a>
+            </p>
+        </div>
+{% endfor %}

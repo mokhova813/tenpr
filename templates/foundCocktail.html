@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe</title>
+</head>
+<body>
+<H1> The recipe of {{data.strDrink}} </H1>
+<img  src="{{ data.strDrinkThumb}}"
+        style= "
+        width : 50%;
+        float : left;
+        margin-right : 50px;">
+<ul>Ingredients:
+{% for i in ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15") %}
+{% if data["strIngredient" + i] != None %}
+    <li>{{data["strIngredient" + i]}}</li>
+{%endif%}
+{%endfor%}
+</ul>
+{{data.strInstructions}}
+</body>
+</html>

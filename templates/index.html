@@ -5,6 +5,12 @@
     <title>Drinks base</title>
 </head>
 <body>
+<div style= "
+        width : 50%;
+        float : right ">
+<iframe name = "game" style= "width : 100%; height : 30em;" src="/find"></iframe>
+    <p><a href = "/find" target="game">Find Random!</a></p>
+</div>
 
 <form method="POST" action="/search">
 <p>Choose category of drink:</p>
@@ -14,8 +20,15 @@
 </form>
 
 <form method="POST" action="/search">
+    <p>Search by name</p>
     <input name="byName">
     <input type="submit", value="Find!">
+</form>
+
+<form method="POST" action="/search">
+    <p>Search by ingredient</p>
+    <input name="byIngredient">
+    <input type="submit" , value="Find!">
 </form>
 
 </body>
