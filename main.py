@@ -17,10 +17,10 @@ collection = db.registration_collection
 
 @app.route('/')
 def my_form():
-    # if 'username' in session:
-    #     return render_template('index.html', data='You are logged in as ' + session['username'])
-    # else:
-    return render_template('index.html', reg=1)
+    if 'username' in session:
+        return render_template('index.html', data='You are logged in as ' + session['username'])
+    else:
+        return render_template('index.html', reg=1)
 
 
 @app.route('/login', methods=['POST', 'GET'])
@@ -30,10 +30,10 @@ def login():
         login_user = users.find_one({'name': request.form['username']})
 
         if login_user:
-            if bcrypt.hashpw(unicode(request.form['pass']), login_user['password'].encode('utf-8')) == \
-                    login_user['password'].encode('utf-8'):
+            if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password']) == login_user['password']:
                 session['username'] = request.form['username']
                 return redirect('/')
+        else:
             return 'Invalid username/password combination'
     return render_template('login.html')
 
@@ -48,7 +48,6 @@ def register():
             hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.gensalt())
             users.insert({'name': request.form['username'], 'password': hashpass})
             session['username'] = request.form['username']
-            # return redirect(url_for('index'))
             return redirect('/')
 
         return 'That username already exists!'
@@ -56,10 +55,11 @@ def register():
     return render_template('registration.html')
 
 
-# @app.route('/logout')
-# def logout():
-#
-#     return redirect(url_for('login'))
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect('/')
+
 
 @app.route('/search', methods=['POST'])
 def my_form_post():
