@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import Login from "./components/login";
 import SearchIngr from "./components/searchIngr";

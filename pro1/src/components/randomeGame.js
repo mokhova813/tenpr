@@ -7,7 +7,7 @@ class RandomeGame extends React.Component {
     render() {
     return (
       <div>
-      <Image src="C:/Users/kamie/tenz/tenpr/pro/src/resours/coc.jpg/100px250" fluid />
+      <Image src="C:/Users/Alla/Desktop/pro/src/resours/coc.jpg/100px250" fluid />
       <Button variant="primary" type="submit">
   Играть !
   </Button>

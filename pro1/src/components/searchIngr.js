@@ -21,9 +21,9 @@ class SearchIngr extends React.Component{
   </Button>
 </Form>
                 <Form>
-  <Form.Group controlId="formBasicEmail">
+  <Form.Group controlId="searchByName">
     <Form.Label>Поиск по названию</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
+    <Form.Control type="search" placeholder="Enter name" />
     <Form.Text className="text-muted">
     </Form.Text>
   </Form.Group>
@@ -31,9 +31,9 @@ class SearchIngr extends React.Component{
     Поиск
   </Button>
 
-  <Form.Group controlId="formBasicPassword">
+  <Form.Group controlId="searchByIngridient">
     <Form.Label>Поиск по ингридиенту</Form.Label>
-    <Form.Control type="password" placeholder="Password" />
+    <Form.Control type="search" placeholder="Enter Ingridients" />
   </Form.Group>
   <Button variant="primary" type="submit">
    Поиск
