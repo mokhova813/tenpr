@@ -1,0 +1,17 @@
+.coctail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  
+  .coctail-image {
+    height: 300px;
+  }
+  
+  .coctail-name {
+    font-size: 40px;
+    max-width: 300px;
+    text-align: center;
+  }

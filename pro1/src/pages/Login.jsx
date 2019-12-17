@@ -1,8 +1,10 @@
-import React from "react";
+import React from 'react';
 import Form from 'react-bootstrap/Form'
-import { Button} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import MyBatton from '../components/Button';
+import "./Login.css";
 
-class Login extends React.Component{
+export default class Login extends React.Component{
     render(){
         return(
             <div>
@@ -14,21 +16,16 @@ class Login extends React.Component{
       Мы никогда не будем делиться вашей электронной почтой с кем-либо еще.
     </Form.Text>
   </Form.Group>
-
   <Form.Group controlId="formBasicPassword">
     <Form.Label>Пароль</Form.Label>
     <Form.Control type="password" placeholder="Password" />
   </Form.Group>
-  <Button variant="primary" type="submit">
-    Войти
-  </Button>
-  <Button variant="primary" type="submit">
-    Зарегистрироваться
-  </Button>
+  <Link to="/randomeGame">
+    <MyBatton caption="Войти" onClick={()=>{}}></MyBatton>
+    </Link>
 </Form>
     </div>
 
         )
     }
 }
-export default Login;
