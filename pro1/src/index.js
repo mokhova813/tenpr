@@ -2,12 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-<<<<<<< HEAD
 import './App.css';
-import 'C:/Users/kamie/tenz/tenpr/pro1/node_modules/bootstrap/dist/css/bootstrap.min.css';
-
-=======
->>>>>>> bc05717868a790397e19434378271846e0598707
+import 'C:/Users/kamie/te/tenpr/pro1/node_modules/bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));

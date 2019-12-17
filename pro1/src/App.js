@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 import React from "react";
-=======
-import 'bootstrap/dist/css/bootstrap.css';
-import React from 'react';
-import Login from "./components/login";
-import SearchIngr from "./components/searchIngr";
-import RandomeGame from "./components/randomeGame";
->>>>>>> bc05717868a790397e19434378271846e0598707
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from "./pages/Home";
@@ -35,4 +27,3 @@ export default class App extends React.Component {
   }
 }
 
-// export default App;
