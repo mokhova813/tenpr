@@ -14,7 +14,7 @@ class Login extends React.Component{
             <div>
               <Form>
   <Form.Group controlId="formBasicEmail">
-    <Form.Label>Введите ваш email </Form.Label>
+    <Form.Label> Введите ваш email </Form.Label>
     <Form.Control type="email" placeholder="Enter email" />
     <Form.Text className="text-muted">
       Мы никогда не будем делиться вашей электронной почтой с кем-либо еще.
@@ -22,7 +22,7 @@ class Login extends React.Component{
   </Form.Group>
 
   <Form.Group controlId="formBasicPassword">
-    <Form.Label>Пароль</Form.Label>
+    <Form.Label> Пароль</Form.Label>
     <Form.Control type="password" placeholder="Password" />
   </Form.Group>
   <Button className={s.button_new} variant="primary" type="submit">
