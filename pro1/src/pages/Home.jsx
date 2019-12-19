@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import MyBatton from '../components/Button';
 import './Home.css';
 
-
-
 export default class Home extends React.Component {
   render() {
     return (
@@ -13,11 +11,14 @@ export default class Home extends React.Component {
         <Form>
           <Link to="/login"> Войти
               </Link>
+         
+
         </Form>
         <Form>
           <Form.Label>Впервые на нашем сайте ?</Form.Label>
           <Link to="/login"> Зарегистрироваться
               </Link>
+
         </Form>
         <Form>
           <Form.Label>Выберите категорию желаемого коктеля </Form.Label>
@@ -54,7 +55,6 @@ export default class Home extends React.Component {
             <MyBatton caption="Рандом" onClick={() => { }}></MyBatton>
           </Link>
         </Form>
-
       </div>
     )
   }
