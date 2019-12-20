@@ -8,7 +8,7 @@ import "./Login.css";
 export default class Login extends React.Component {
   render() {
     return (
-<<<<<<< HEAD
+
       <div>
         <Col md={4} sm={4}>
           <Form>
@@ -29,8 +29,6 @@ export default class Login extends React.Component {
           </Form>
         </Col>
       </div>
-
-=======
       <div class="parent" >
         <div class="block">
           <Form>
@@ -59,7 +57,6 @@ export default class Login extends React.Component {
           </Form>
         </div>
       </div>
->>>>>>> e2aed4ea96458d9ef15fa77b42cf2ed61d14849a
     )
   }
 }

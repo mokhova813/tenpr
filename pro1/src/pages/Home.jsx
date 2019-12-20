@@ -62,11 +62,8 @@ export default class Home extends React.Component {
             <MyBatton caption="Рандом" onClick={() => { }}></MyBatton>
           </Link>
         </Form>
-<<<<<<< HEAD
         </Col>
 </Row>
-=======
->>>>>>> e2aed4ea96458d9ef15fa77b42cf2ed61d14849a
       </div>
     )
   }
