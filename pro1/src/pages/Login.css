@@ -99,18 +99,27 @@ button.submit {
     text-decoration: none;
     width: 50%;
     height: 30%;
-    
+    position: relative;
+    bottom: 10%; /* Положение от нижнего края */
+    right: -15%; /* Положение от правого края */
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #4a82d6 #000 #bac6da;
+    border-radius: 6px;
+    background: linear-gradient(#447ed4, #a7b7d4)#1d69db;
+    transition: 0.2s;
 }
+
 button.submit:hover {
     opacity:.85;
     cursor: pointer;
+    background: linear-gradient( #a7b7d4, #447ed4) #1d69db;
 }
 button.submit:active {
-    border: 1% solid #391fc9;
-    box-shadow: 0 0 10px 5px #0d0fad inset;
-    -webkit-box-shadow:0 0 10px 5px #391fc9  inset ;
-    -moz-box-shadow: 0 0 10px 5px #391fc9  inset;
-    -ms-box-shadow: 0 0 10px 5px #391fc9  inset;
-    -o-box-shadow: 0 0 10px 5px #391fc9  inset;
-    
+    background: linear-gradient(#447ed4, #a7b7d4) #1d69db;
 }
