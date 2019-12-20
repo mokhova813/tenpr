@@ -1,8 +1,7 @@
-  
-import React from "react";
+  import React from "react";
 import "./Coctail.css";
 
-export default class Person extends React.Component {
+export default class Coctail extends React.Component {
   render() {
     return (
       <div className="coctail-container">

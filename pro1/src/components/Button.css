@@ -1,12 +1,13 @@
 .button{
-    height: 50px;
-  width: 120px;
+    height: 30px;
+  width: 70px;
   margin: 0 12px;
   border: none;
   outline: none;
-  background: rgb(160, 10, 10);
-  color: #fff0f0;
-  font-size: 30px;
-  border-radius: 10px;
+  font-size: 15px;
+  border-radius: 20px;
   cursor: pointer;
+  background-color: rgb(163, 208, 219);
+  color: rgb(12, 2, 34);
+  border: 2px solid rgb(32, 33, 107);
 }

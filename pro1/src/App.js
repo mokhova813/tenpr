@@ -8,7 +8,6 @@ import ResultSearch from "./pages/ResultSearch";
 
 
 
-
 export default class App extends React.Component {
   render() {
     return (

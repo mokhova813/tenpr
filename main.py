@@ -4,7 +4,7 @@ import urllib.request
 
 from flask import Flask, render_template, request, session, redirect
 from pymongo import MongoClient
-
+from flask_cors import CORS
 app = Flask(__name__)
 
 client = MongoClient()
@@ -52,7 +52,7 @@ def register():
 
         return 'That username already exists!'
 
-    return render_template('registration.html')
+    return {"msg":"hello"}
 
 
 @app.route('/logout')
@@ -121,4 +121,5 @@ def show_recipe():
 
 if __name__ == "__main__":
     app.secret_key = 'mysecret'
+    CORS(app)
     app.run(debug=True)

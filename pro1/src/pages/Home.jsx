@@ -1,8 +1,9 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
 import MyBatton from '../components/Button';
 import './Home.css';
+import {Form,  Col, Row, Image} from 'react-bootstrap';
+import img from '../img/coc.jpg'
 
 
 
@@ -10,6 +11,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
+        <Col md={4} sm={4}>
         <Form>
           <Link to="/login"> Войти
               </Link>
@@ -19,6 +21,9 @@ export default class Home extends React.Component {
           <Link to="/login"> Зарегистрироваться
               </Link>
         </Form>
+        </Col>
+        <Row>
+        <Col md={4} sm={4}>
         <Form>
           <Form.Label>Выберите категорию желаемого коктеля </Form.Label>
           <Form.Group controlId="formBasicCheckbox">
@@ -47,14 +52,17 @@ export default class Home extends React.Component {
             <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
           </Link>
         </Form>
+        </Col>
+        <Col md={8} sm={8}>
         <Form.Label>Хочешь испытать удачу и выпить то, что подготовила тебе судьба? жми на кнопку!</Form.Label>
+        <Image src={img} thumbnail width="425" height="300"/>
         <Form>
-
           <Link to="/randomeGame">
             <MyBatton caption="Рандом" onClick={() => { }}></MyBatton>
           </Link>
         </Form>
-
+        </Col>
+</Row>
       </div>
     )
   }
