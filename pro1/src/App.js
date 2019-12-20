@@ -20,7 +20,7 @@ export default class App extends React.Component {
             <Route path="/" component={Home} />
           </Switch>
         </Router>
-
+        
       </div>
     );
   }

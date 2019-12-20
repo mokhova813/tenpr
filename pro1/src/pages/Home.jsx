@@ -5,8 +5,6 @@ import './Home.css';
 import {Form,  Col, Row, Image} from 'react-bootstrap';
 import img from '../img/coc.jpg'
 
-
-
 export default class Home extends React.Component {
   render() {
     return (
@@ -15,11 +13,14 @@ export default class Home extends React.Component {
         <Form>
           <Link to="/login"> Войти
               </Link>
+         
+
         </Form>
         <Form>
           <Form.Label>Впервые на нашем сайте ?</Form.Label>
           <Link to="/login"> Зарегистрироваться
               </Link>
+
         </Form>
         </Col>
         <Row>
@@ -61,8 +62,11 @@ export default class Home extends React.Component {
             <MyBatton caption="Рандом" onClick={() => { }}></MyBatton>
           </Link>
         </Form>
+<<<<<<< HEAD
         </Col>
 </Row>
+=======
+>>>>>>> e2aed4ea96458d9ef15fa77b42cf2ed61d14849a
       </div>
     )
   }
