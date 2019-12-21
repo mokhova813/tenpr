@@ -8,7 +8,7 @@ import img from '../img/coc.jpg'
 export default class Home extends React.Component {
   render() {
     return (
-      <div>
+      <div className="home">
         <Col md={4} sm={4}>
         <Form>
           <Link to="/login"> Войти

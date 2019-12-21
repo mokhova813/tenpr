@@ -8,11 +8,11 @@
     padding-top: 1rem;
     
    }
-div {
-    background-color: #FCF8F7;
-    
-    
+.home {
+
+    background-image: url("../img/snowf.jpg");
     text-indent: 1em; /* Отступ первой строки */
     text-align: justify; /* Выравнивание по ширине */
+    padding-bottom: 350px;
     }
    
