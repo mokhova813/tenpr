@@ -26,12 +26,12 @@ export default class Home extends React.Component {
         <Row>
         <Col md={4} sm={4}>
         <Form>
-          <Form.Label>Выберите категорию желаемого коктеля </Form.Label>
+          <Form.Label>Выберите категорию желаемого коктейля: </Form.Label>
           <Form.Group controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Алкогольный" />
           </Form.Group>
           <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Безлкогольный" />
+            <Form.Check type="checkbox" label="Безалкогольный" />
           </Form.Group>
           <Link to="/resultSearch">
             <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
