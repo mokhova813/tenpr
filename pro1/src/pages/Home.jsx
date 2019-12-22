@@ -30,10 +30,10 @@ export default class Home extends React.Component {
                 <Form>
                   <Form.Label>Выберите категорию желаемого коктейля: </Form.Label>
                   <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Алкогольный" />
+                    <Form.Check class = "check" type="checkbox" label=" Алкогольный" />
                   </Form.Group>
                   <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Безалкогольный" />
+                    <Form.Check class = "check" type="checkbox" label=" Безалкогольный" />
                   </Form.Group>
                   <Link to="/resultSearch">
                     <MyBatton  caption="Поиск" onClick={() => { }}></MyBatton>
@@ -41,7 +41,7 @@ export default class Home extends React.Component {
                 </Form>
                 <Form>
                   <Form.Group controlId="formName">
-                    <Form.Label>Поиск по названию</Form.Label>
+                    <Form.Label>Поиск по названию  </Form.Label>
                     <Form.Control type="name" placeholder="Введите название коктейля" />
                   </Form.Group>
                   <Link to="/resultSearch">
@@ -50,7 +50,7 @@ export default class Home extends React.Component {
                 </Form>
                 <Form>
                   <Form.Group controlId="formIngredient">
-                    <Form.Label>Поиск по ингредиенту</Form.Label>
+                    <Form.Label>Поиск по ингредиенту  </Form.Label>
                     <Form.Control type="ingredient" placeholder="Введите ингредиент" />
                   </Form.Group>
                   <Link to="/resultSearch">
