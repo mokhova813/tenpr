@@ -2,17 +2,118 @@
     position: auto;
     padding-top: 1rem;
 
-   }
-   .form-label {
+}
+
+.form-label {
     position: auto;
     padding-top: 1rem;
-    
-   }
+
+}
+
 .home {
 
     background-image: url("../img/snowf.jpg");
-    text-indent: 1em; /* Отступ первой строки */
-    text-align: justify; /* Выравнивание по ширине */
-    padding-bottom: 350px;
-    }
-   
+    text-indent: 1em; 
+    /* Отступ первой строки  */
+    text-align: justify;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #0b2852;
+}
+
+.logo {
+    width: 200px;
+    float: left;
+    height: 50px;
+}
+
+.logo a {
+    display: block;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-family: "Exo2-Bold", sans-serif;
+    font-size: 28px;
+    color: #b2aeb2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.coc {
+    color: #aa064b;
+
+}
+
+.teil {
+    color: #429595;
+}
+
+.logo p {
+    margin-left: 20px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-family: "Exo2-Medium", sans-serif;
+    font-size: 13px;
+    color: white;
+}
+
+.top-menu {    float: right;
+}
+
+.top-menu ul li {
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+
+.top-menu ul li a {
+    display: block;
+    width: 140px;
+    text-decoration: none;
+    font-family: "Exo2-Medium", sans-serif;
+    font-size: 17px;
+    color: white;
+    height: 35px;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.top-menu ul li a:hover {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    background: #00ADE4;
+}
+
+
+
+.parent-home {
+    display: flex;
+    vertical-align: top;
+    overflow: auto;
+    padding: 20px;
+}
+
+.block-home {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-width: 7px;
+    border-style: ridge;
+    border-color: cornflowerblue;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}

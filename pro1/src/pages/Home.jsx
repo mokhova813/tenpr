@@ -2,69 +2,81 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MyBatton from '../components/Button';
 import './Home.css';
-import {Form,  Col, Row, Image} from 'react-bootstrap';
+import { Form, Col, Row, Image } from 'react-bootstrap';
 import img from '../img/coc.jpg'
 
 export default class Home extends React.Component {
   render() {
     return (
-      <div className="home">
-        <Col md={4} sm={4}>
-        <Form>
-          <Link to="/login"> Войти
-              </Link>
-         
+      <div class="home content">
+        <div class="header">
+          <div class="logo">
+            <a href="index.html">
+              <span class="coc">COC</span><span class="teil">TAIL</span>
+            </a>
+          </div>
+          <div class="top-menu">
+            <ul>
+              <li><a href="/login">Вход</a></li>
+              <li><a href="/SingUp">Регистрация</a></li>
+            </ul>
+          </div>
+        </div>
 
-        </Form>
-        <Form>
-          <Form.Label>Впервые на нашем сайте ?</Form.Label>
-          <Link to="/login"> Зарегистрироваться
-              </Link>
+        <div class="parent-home container">
+          <div class="block-home container">
+            <Col md={10} sm={4}>
+              <Col md={4} sm={4}>
+                <Form>
+                  <Form.Label>Выберите категорию желаемого коктейля: </Form.Label>
+                  <Form.Group controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label="Алкогольный" />
+                  </Form.Group>
+                  <Form.Group controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label="Безалкогольный" />
+                  </Form.Group>
+                  <Link to="/resultSearch">
+                    <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
+                  </Link>
+                </Form>
+                <Form>
+                  <Form.Group controlId="formName">
+                    <Form.Label>Поиск по названию</Form.Label>
+                    <Form.Control type="name" placeholder="Введите название коктейля" />
+                  </Form.Group>
+                  <Link to="/resultSearch">
+                    <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
+                  </Link>
+                </Form>
+                <Form>
+                  <Form.Group controlId="formIngredient">
+                    <Form.Label>Поиск по ингредиенту</Form.Label>
+                    <Form.Control type="ingredient" placeholder="Введите ингредиент" />
+                  </Form.Group>
+                  <Link to="/resultSearch">
+                    <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
+                  </Link>
+                </Form>
+              </Col>
+              <Col md={10} sm={10}>
+                
+                <Col md={4} sm={4}>
+                  <Image src={img} thumbnail />
+                </Col>
+                <Col md={4} sm={4}>
 
-        </Form>
-        </Col>
-        <Row>
-        <Col md={4} sm={4}>
-        <Form>
-          <Form.Label>Выберите категорию желаемого коктейля: </Form.Label>
-          <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Алкогольный" />
-          </Form.Group>
-          <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Безалкогольный" />
-          </Form.Group>
-          <Link to="/resultSearch">
-            <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
-          </Link>
-        </Form>
-        <Form>
-          <Form.Group controlId="formName">
-            <Form.Label>Поиск по названию</Form.Label>
-            <Form.Control type="name" placeholder="Введите название коктейля" />
-          </Form.Group>
-          <Link to="/resultSearch">
-            <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
-          </Link>
-          <Form.Group controlId="formIngredient">
-            <Form.Label>Поиск по ингредиенту</Form.Label>
-            <Form.Control type="ingredient" placeholder="Введите ингредиент" />
-          </Form.Group>
-          <Link to="/resultSearch">
-            <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
-          </Link>
-        </Form>
-        </Col>
-        <Col md={8} sm={8}>
-        <Form.Label>Хочешь испытать удачу и выпить то, что подготовила тебе судьба? жми на кнопку!</Form.Label>
-        <Image src={img} thumbnail width="425" height="300"/>
-        <Form>
-          <Link to="/randomeGame">
-            <MyBatton caption="Рандом" onClick={() => { }}></MyBatton>
-          </Link>
-        </Form>
-        </Col>
-</Row>
-      </div>
+                  <Form.Label>Хочешь испытать удачу и выпить то, что подготовила тебе судьба? жми на кнопку!</Form.Label>
+                  <Form>
+                    <Link to="/randomeGame">
+                      <MyBatton caption="Рандом" onClick={() => { }}></MyBatton>
+                    </Link>
+                  </Form>
+                </Col>
+              </Col>
+            </Col>
+          </div>
+        </div>
+      </div >
     )
   }
 }
