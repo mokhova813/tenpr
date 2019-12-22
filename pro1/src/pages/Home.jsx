@@ -36,7 +36,7 @@ export default class Home extends React.Component {
                     <Form.Check type="checkbox" label="Безалкогольный" />
                   </Form.Group>
                   <Link to="/resultSearch">
-                    <MyBatton class = "button-search" caption="Поиск" onClick={() => { }}></MyBatton>
+                    <MyBatton  caption="Поиск" onClick={() => { }}></MyBatton>
                   </Link>
                 </Form>
                 <Form>
@@ -45,7 +45,7 @@ export default class Home extends React.Component {
                     <Form.Control type="name" placeholder="Введите название коктейля" />
                   </Form.Group>
                   <Link to="/resultSearch">
-                    <MyBatton class = "button-search" caption="Поиск" onClick={() => { }}></MyBatton>
+                    <MyBatton  caption="Поиск" onClick={() => { }}></MyBatton>
                   </Link>
                 </Form>
                 <Form>
@@ -54,7 +54,7 @@ export default class Home extends React.Component {
                     <Form.Control type="ingredient" placeholder="Введите ингредиент" />
                   </Form.Group>
                   <Link to="/resultSearch">
-                    <MyBatton  class = "button-search" caption="Поиск" onClick={() => { }}></MyBatton>
+                    <MyBatton   caption="Поиск" onClick={() => { }}></MyBatton>
                   </Link>
                 </Form>
               </Col>
@@ -68,7 +68,7 @@ export default class Home extends React.Component {
                   <Form.Label>Хочешь испытать удачу и выпить то, что подготовила тебе судьба? жми на кнопку!</Form.Label>
                   <Form>
                     <Link to="/randomeGame">
-                      <MyBatton class = "button-random"caption="Рандом" onClick={() => { }}></MyBatton>
+                      <MyBatton caption="Рандом" onClick={() => { }}></MyBatton>
                     </Link>
                   </Form>
                 </Col>
