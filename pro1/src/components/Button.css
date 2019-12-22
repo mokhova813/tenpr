@@ -29,7 +29,7 @@
   text-align: center;
   text-shadow: 0-1% 0 #26148f;
   text-decoration: none;
-  width: 20%;
+  width: 30%;
   height: 20%;
   position: relative;
   bottom: -1px;
@@ -47,6 +47,7 @@
   border-radius: 6px;
   background: linear-gradient(#447ed4, #a7b7d4)#1d69db;
   transition: 0.2s;
+  margin-top: 5%;
 }
 button:hover {
   opacity: .85;

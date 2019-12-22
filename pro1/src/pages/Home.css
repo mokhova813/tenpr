@@ -16,7 +16,7 @@
     text-indent: 1em; 
     /* Отступ первой строки  */
     text-align: justify;
-    padding-bottom: 210px;
+    padding-bottom: 30%;
 }
 
 * {
@@ -124,3 +124,9 @@
     margin: 0 0 5px 5px; /* Отступы вокруг фотографии */
 }
 
+.searchName{
+    width: 60%;
+}
+.searchIngredient{
+    width: 60%;
+}

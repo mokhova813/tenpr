@@ -44,7 +44,7 @@ export default class Home extends React.Component {
                     <Form.Label>Поиск по названию  </Form.Label>
                   </Form.Group>
                   <Form.Group controlId="formName">
-                  <Form.Control class = "searchName" type="name" placeholder="Введите название коктейля" />
+                  <Form.Control class = "searchName" type="name"  placeholder="Введите название коктейля" />
                   </Form.Group>
                   <Link to="/resultSearch">
                     <MyBatton  caption="Поиск" onClick={() => { }}></MyBatton>
