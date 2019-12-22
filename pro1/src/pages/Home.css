@@ -16,6 +16,7 @@
     text-indent: 1em; 
     /* Отступ первой строки  */
     text-align: justify;
+    padding-bottom: 210px;
 }
 
 * {
@@ -116,4 +117,12 @@
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+}
+.button-search {
+    background-color: #1d69db;
+    border-radius: 3%;
+}
+.img{
+    position: relative;
+
 }

@@ -36,7 +36,7 @@ export default class Home extends React.Component {
                     <Form.Check type="checkbox" label="Безалкогольный" />
                   </Form.Group>
                   <Link to="/resultSearch">
-                    <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
+                    <MyBatton class = "button-search" caption="Поиск" onClick={() => { }}></MyBatton>
                   </Link>
                 </Form>
                 <Form>
@@ -45,7 +45,7 @@ export default class Home extends React.Component {
                     <Form.Control type="name" placeholder="Введите название коктейля" />
                   </Form.Group>
                   <Link to="/resultSearch">
-                    <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
+                    <MyBatton class = "button-search" caption="Поиск" onClick={() => { }}></MyBatton>
                   </Link>
                 </Form>
                 <Form>
@@ -54,21 +54,21 @@ export default class Home extends React.Component {
                     <Form.Control type="ingredient" placeholder="Введите ингредиент" />
                   </Form.Group>
                   <Link to="/resultSearch">
-                    <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
+                    <MyBatton  class = "button-search" caption="Поиск" onClick={() => { }}></MyBatton>
                   </Link>
                 </Form>
               </Col>
               <Col md={10} sm={10}>
                 
                 <Col md={4} sm={4}>
-                  <Image src={img} thumbnail />
+                  <Image class = "img" src={img} thumbnail />
                 </Col>
                 <Col md={4} sm={4}>
 
                   <Form.Label>Хочешь испытать удачу и выпить то, что подготовила тебе судьба? жми на кнопку!</Form.Label>
                   <Form>
                     <Link to="/randomeGame">
-                      <MyBatton caption="Рандом" onClick={() => { }}></MyBatton>
+                      <MyBatton class = "button-random"caption="Рандом" onClick={() => { }}></MyBatton>
                     </Link>
                   </Form>
                 </Col>
