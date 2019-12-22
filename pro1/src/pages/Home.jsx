@@ -40,40 +40,45 @@ export default class Home extends React.Component {
                   </Link>
                 </Form>
                 <Form>
-                  <Form.Group controlId="formName">
+                  <Form.Group controlId="formSearchName">
                     <Form.Label>Поиск по названию  </Form.Label>
-                    <Form.Control type="name" placeholder="Введите название коктейля" />
+                  </Form.Group>
+                  <Form.Group controlId="formName">
+                  <Form.Control class = "searchName" type="name" placeholder="Введите название коктейля" />
                   </Form.Group>
                   <Link to="/resultSearch">
                     <MyBatton  caption="Поиск" onClick={() => { }}></MyBatton>
                   </Link>
                 </Form>
                 <Form>
-                  <Form.Group controlId="formIngredient">
+                  <Form.Group controlId="formSearchIngredient">
                     <Form.Label>Поиск по ингредиенту  </Form.Label>
-                    <Form.Control type="ingredient" placeholder="Введите ингредиент" />
+                  </Form.Group>
+                  <Form.Group controlId="formIngredient">
+                  <Form.Control class = "searchIngredient" type="ingredient" placeholder="Введите ингредиент" />
                   </Form.Group>
                   <Link to="/resultSearch">
                     <MyBatton   caption="Поиск" onClick={() => { }}></MyBatton>
                   </Link>
                 </Form>
               </Col>
-              <Col md={10} sm={10}>
+
+                </Col>
+\
+                <Col md={10} sm={10}>
                 
                 <Col md={4} sm={4}>
                   <Image class = "img" src={img} thumbnail />
                 </Col>
                 <Col md={4} sm={4}>
-
-                  <Form.Label>Хочешь испытать удачу и выпить то, что подготовила тебе судьба? жми на кнопку!</Form.Label>
+                <Form.Label>Хочешь испытать удачу и выпить то, что подготовила тебе судьба? жми на кнопку!</Form.Label>
                   <Form>
                     <Link to="/randomeGame">
                       <MyBatton caption="Рандом" onClick={() => { }}></MyBatton>
                     </Link>
                   </Form>
+                  </Col>
                 </Col>
-              </Col>
-            </Col>
           </div>
         </div>
       </div >
