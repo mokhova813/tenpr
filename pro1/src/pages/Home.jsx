@@ -28,7 +28,9 @@ export default class Home extends React.Component {
             <Col md={10} sm={4}>
               <Col md={4} sm={4}>
                 <Form>
+                <div class="text">
                   <Form.Label>Выберите категорию желаемого коктейля: </Form.Label>
+                </div>
                   <Form.Group controlId="formBasicCheckbox">
                     <Form.Check class = "check" type="checkbox" label=" Алкогольный" />
                   </Form.Group>
@@ -40,8 +42,10 @@ export default class Home extends React.Component {
                   </Link>
                 </Form>
                 <Form>
-                  <Form.Group controlId="formSearchName">
-                    <Form.Label>Поиск по названию  </Form.Label>
+                  <Form.Group class = "text" controlId="formSearchName">
+                  <div class="text">
+                    <Form.Label>  Поиск по названию   </Form.Label>
+                    </div>
                   </Form.Group>
                   <Form.Group controlId="formName">
                   <Form.Control class = "searchName" type="name"  placeholder="Введите название коктейля" />
@@ -52,7 +56,9 @@ export default class Home extends React.Component {
                 </Form>
                 <Form>
                   <Form.Group controlId="formSearchIngredient">
+                  <div class="text">
                     <Form.Label>Поиск по ингредиенту  </Form.Label>
+                    </div>
                   </Form.Group>
                   <Form.Group controlId="formIngredient">
                   <Form.Control class = "searchIngredient" type="ingredient" placeholder="Введите ингредиент" />
@@ -71,7 +77,9 @@ export default class Home extends React.Component {
                   <Image class = "img" src={img} thumbnail />
                 </Col>
                 <Col md={4} sm={4}>
+                <div class="text">
                 <Form.Label>Хочешь испытать удачу и выпить то, что подготовила тебе судьба? жми на кнопку!</Form.Label>
+                </div>
                   <Form>
                     <Link to="/randomeGame">
                       <MyBatton caption="Рандом" onClick={() => { }}></MyBatton>
