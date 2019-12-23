@@ -61,7 +61,7 @@ def logout():
     return redirect('/')
 
 
-@app.route('/search', methods=['POST'])
+@app.route('/api/search', methods=['POST'])
 def my_form_post():
     str_nonalc = ""
     str_alc = ""
@@ -70,35 +70,37 @@ def my_form_post():
     api_byName = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
     api_byIngredient = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i="
 
-    if request.form.get("alc") or request.form.get("nonalc"):
-        if request.form.get("alc"):
+    data = request.json
+    if data['alc'] or data['noalc']:
+        if data['alc']:
             json_obj_alc = urllib.request.urlopen(api_alc)
             data_alc = json.load(json_obj_alc)
-            str_alc = render_template('list.html', data=data_alc["drinks"])
+            str_alc = data_alc["drinks"]
 
-        if request.form.get("nonalc"):
+        if data['noalc']:
             json_obj_nonalc = urllib.request.urlopen(api_nonalc)
             data_nonalc = json.load(json_obj_nonalc)
-            str_nonalc = render_template('list.html', data=data_nonalc["drinks"])
+            str_nonalc = data_nonalc["drinks"]
 
-        return render_template('search.html', s1=str_alc, s2=str_nonalc)
+        return dict(s1=str_alc, s2=str_nonalc)
 
 
-    elif request.form.get("byName"):
-        json_obj_byName = urllib.request.urlopen(api_byName + (request.form.get("byName")).replace(' ', '%20'))
-        data_byName = json.load(json_obj_byName)
-        str_byName = render_template('list.html', data=data_byName["drinks"])
-        return render_template('searchByName.html', s1=str_byName)
+    # elif request.form.get("byName"):
+    #     json_obj_byName = urllib.request.urlopen(api_byName + (request.form.get("byName")).replace(' ', '%20'))
+    #     data_byName = json.load(json_obj_byName)
+    #     str_byName = render_template('list.html', data=data_byName["drinks"])
+    #     return render_template('searchByName.html', s1=str_byName)
 
-    elif request.form.get("byIngredient"):
-        json_obj_byIngredient = urllib.request.urlopen(
-            api_byIngredient + request.form.get("byIngredient").replace(' ', '%20'))
-        data_byIngredient = json.load(json_obj_byIngredient)
-        str_byIngredient = render_template('list.html', data=data_byIngredient["drinks"])
-        return render_template('searchByIngredient.html', s1=str_byIngredient)
+    # elif request.form.get("byIngredient"):
+    #     json_obj_byIngredient = urllib.request.urlopen(
+    #         api_byIngredient + request.form.get("byIngredient").replace(' ', '%20'))
+    #     data_byIngredient = json.load(json_obj_byIngredient)
+    #     str_byIngredient = render_template('list.html', data=data_byIngredient["drinks"])
+    #     return render_template('searchByIngredient.html', s1=str_byIngredient)
 
-    else:
-        return "ERROR!"
+    # else:
+    #     return "ERROR!"\
+    return []
 
 
 @app.route('/find', methods=['GET'])
