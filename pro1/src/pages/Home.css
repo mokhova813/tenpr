@@ -122,6 +122,7 @@
 .img {
     float: right; /* Выравнивание по правому краю */
     margin: 0 0 5px 5px; /* Отступы вокруг фотографии */
+    width: 100px;
 }
 
 .searchName{

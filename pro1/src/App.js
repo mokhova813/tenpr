@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import RandomeGame from "./pages/RandomeGame";
 import ResultSearch from "./pages/ResultSearch";
+import SingUp from "./pages/SingUp";
+import We from "./pages/We";
 
 
 
@@ -14,13 +16,15 @@ export default class App extends React.Component {
       <div className="App">
         <Router>
           <Switch>
+            <Route path="/we/" component={We} />
+            <Route path="/singup/" component={SingUp} />
             <Route path="/login/" component={Login} />
             <Route path="/resultSearch/" component={ResultSearch} />
             <Route path="/randomeGame/" component={RandomeGame} />
             <Route path="/" component={Home} />
           </Switch>
         </Router>
-        
+
       </div>
     );
   }
