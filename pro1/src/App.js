@@ -7,7 +7,7 @@ import RandomeGame from "./pages/RandomeGame";
 import ResultSearch from "./pages/ResultSearch";
 import SingUp from "./pages/SingUp";
 import We from "./pages/We";
-
+import Search from "./pages/Search";
 
 
 export default class App extends React.Component {
@@ -16,6 +16,7 @@ export default class App extends React.Component {
       <div className="App">
         <Router>
           <Switch>
+          <Route path="/search/" component={Search} />
             <Route path="/we/" component={We} />
             <Route path="/singup/" component={SingUp} />
             <Route path="/login/" component={Login} />

@@ -9,8 +9,11 @@ export default class Login extends React.Component {
   render() {
     return (
       <div>
+       
         <div class="parent" >
+          
           <div class="block">
+          
             <Form>
               <div class="contact_form h2">
                 <Form.Label>
