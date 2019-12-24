@@ -98,7 +98,7 @@ export default class Home extends React.Component {
                   <Form.Label>Хочешь испытать удачу и выпить то, что подготовила тебе судьба?</Form.Label>
                 </div>
                 <Form>
-                  <Link to="/randomeGame">
+                  <Link to="/search">
                     <MyBatton caption="Рандом" onClick={() => { }}></MyBatton>
                   </Link>
                 </Form>

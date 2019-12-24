@@ -14,13 +14,6 @@ export default class We extends React.Component {
                             <span class="coc">COCK</span><span class="teil">TAIL</span>
                         </a>
                     </div>
-                    <div class="top-menu">
-                        <ul>
-                            <li><a href="/we">О Нас</a></li>
-                            <li><a href="/login">Вход</a></li>
-                            <li><a href="/singup">Регистрация</a></li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="parent-home container">
                     <div class="block-home container">
