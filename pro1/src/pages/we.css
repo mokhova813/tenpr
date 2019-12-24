@@ -1,0 +1,13 @@
+.text{
+    color: #0b2852;
+    font-family: Comic Sans MS;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgb(85, 147, 228), 0 0 1em rgb(121, 202, 216);
+}
+
+.text_creaters{
+    color: #C90F2E;
+    font-family: Comic Sans MS;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgb(245, 67, 97), 0 0 1em rgb(250, 91, 118);
+}

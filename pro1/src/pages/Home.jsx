@@ -9,7 +9,7 @@ export default class Home extends React.Component {
   state = {
     type: 'alco'
   }
-  types = {alc: true, noalc: true}
+  types = { alc: true, noalc: true }
   render() {
     return (
       <div class="home content">
@@ -51,22 +51,27 @@ export default class Home extends React.Component {
                       <Form.Label>  Поиск по названию   </Form.Label>
                     </div>
                   </Form.Group>
-                  <Form.Group controlId="formName">
-                    <Form.Control class="searchName" type="name" placeholder="Введите название коктейля" />
-                  </Form.Group>
+                  <div class="text-field contact_form input">
+                    <Form.Group controlId="formName">
+                      <Form.Control class="searchName" type="name" placeholder="Введите название коктейля" />
+                    </Form.Group>
+                  </div>
                   <Link to="/resultSearch">
                     <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
                   </Link>
                 </Form>
                 <Form>
+
                   <Form.Group controlId="formSearchIngredient">
                     <div class="text">
                       <Form.Label>Поиск по ингредиенту  </Form.Label>
                     </div>
                   </Form.Group>
-                  <Form.Group controlId="formIngredient">
-                    <Form.Control class="searchIngredient" type="ingredient" placeholder="Введите ингредиент" />
-                  </Form.Group>
+                  <div class="text-field contact_form input">
+                    <Form.Group controlId="formIngredient">
+                      <Form.Control class="searchIngredient" type="ingredient" placeholder="Введите ингредиент" />
+                    </Form.Group>
+                  </div>
                   <Link to="/resultSearch">
                     <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
                   </Link>
