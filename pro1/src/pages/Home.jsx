@@ -6,79 +6,78 @@ import { Form, Col } from 'react-bootstrap';
 import img from '../img/coc.jpg';
 
 export default class Home extends React.Component {
-  state = {
-    type: 'alco'
+  constructor(props) {
+    super(props);
+    this.state = {
+      alc: true, 
+      noalc: true,
+      name: null,
+      ingridient: null
+    };
   }
-  types = { alc: true, noalc: true }
+
+  getBoxLinks() {
+    const result = [];
+
+    if (this.state.alc === true) {
+      result.push("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic");
+    }
+    if (this.state.noalc === true) {
+      result.push("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic");
+    }
+
+    return result;
+  }
+  
   render() {
     return (
-      <div class="home content">
-        <div class="header">
-          <div class="logo">
+      <div className="home content">
+        <div className="header">
+          <div className="logo">
             <a href="index.html">
-              <span class="coc">COCK</span><span class="teil">TAIL</span>
+              <span className="coc">COCK</span><span className="teil">TAIL</span>
             </a>
           </div>
-          <div class="top-menu">
+          <div className="top-menu">
             <ul>
               <li><a href="/we">О Нас</a></li>
-              <li><a href="/login">Вход</a></li>
-              <li><a href="/singup">Регистрация</a></li>
+              {/* <li><a href="/login">Вход</a></li>
+              <li><a href="/singup">Регистрация</a></li> */}
             </ul>
           </div>
         </div>
-        <div class="parent-home container">
-          <div class="block-home container">
+        <div className="parent-home container">
+          <div className="block-home container">
             <Col md={10} sm={4}>
               <Col md={4} sm={4}>
                 <Form onSubmit = {this.hadleSubmit}>
-                  <div class="text">
+                  <div className="text">
                     <Form.Label>Выберите категорию желаемого коктейля: </Form.Label>
                   </div>
-                  <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check class="check" type="checkbox" label=" Алкогольный" />
+                  <Form.Group controlId="formBasicCheckboxAlc">
+                    <Form.Check className="check" type="checkbox" label=" Алкогольный" checked={this.state.alc} onChange={(e)=>this.setState({alc:e.target.checked})}/>
                   </Form.Group>
-                  <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check class="check" type="checkbox" label=" Безалкогольный" />
+                  <Form.Group controlId="formBasicCheckboxNoalc">
+                    <Form.Check className="check" type="checkbox" label=" Безалкогольный" checked={this.state.noalc} onChange={(e)=>this.setState({noalc:e.target.checked})} />
                   </Form.Group>
-                  <Link to="/search" props={this.types}>
+                  <Link to={{pathname: "/search", state: {links: this.getBoxLinks()}}}>
                     <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
                   </Link>
                 </Form>
                 <Form>
-                  <Form.Group class="text" controlId="formSearchName">
-                    <div class="text">
+                  <Form.Group className="text" controlId="formSearchName">
+                    <div className="text">
                       <Form.Label>  Поиск по названию   </Form.Label>
                     </div>
                   </Form.Group>
-                  <div class="text-field contact_form input">
+                  <div className="text-field contact_form input">
                     <Form.Group controlId="formName">
-                      <Form.Control class="searchName" type="name" placeholder="Введите название коктейля" />
+                      <input className="searchName" onChange={(n) => this.setState({name: n.target.value})} type="name" placeholder="Введите название коктейля" />
                     </Form.Group>
                   </div>
-                  <Link to="/search">
+                  <Link to={{pathname: "/search", 
+                      state: {links: ["https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + this.state.name]}}}>
                     <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
-                  </Link>
-                </Form>
-                <Form>
-
-                  <Form.Group controlId="formSearchIngredient">
-                    <div class="text">
-                      <Form.Label>Поиск по ингредиенту  </Form.Label>
-                    </div>
-                  </Form.Group>
-                  <div class="text-field contact_form input">
-                    <Form.Group controlId="formIngredient">
-                      <Form.Control class="searchIngredient" type="ingredient" placeholder="Введите ингредиент" />
-                    </Form.Group>
-                  </div>
-                  <Link to="/search">
-                    <MyBatton caption="Поиск" onClick={() => { }}></MyBatton>
-                  </Link>
-                </Form>
-                <Form>
-                  <Link to="/resultSearch">
-                    <MyBatton caption="Все коктейли" onClick={() => { }}></MyBatton>
                   </Link>
                 </Form>
               </Col>
@@ -94,11 +93,14 @@ export default class Home extends React.Component {
                 />
               </Col>
               <Col md={4} sm={4}>
-                <div class="text">
+                <div className="text">
                   <Form.Label>Хочешь испытать удачу и выпить то, что подготовила тебе судьба?</Form.Label>
                 </div>
                 <Form>
-                  <Link to="/search">
+                  <Link to={{
+                    pathname: "/search", 
+                    state: {links: ["https://www.thecocktaildb.com/api/json/v1/1/random.php"]}
+                    }}>
                     <MyBatton caption="Рандом" onClick={() => { }}></MyBatton>
                   </Link>
                 </Form>
